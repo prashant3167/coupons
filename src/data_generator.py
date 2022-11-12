@@ -72,9 +72,6 @@ def create_coupons(count):
     rule_length = len(coupon_rules)
     for i in range(count):
         select_rule = random.randint(0, rule_length - 1)
-        # print("length",rule_length)
-        # print("select_rule",select_rule)
-        # print(coupon_rules[select_rule]['rule_id'])
         coupon = {
             "code": coupon_id_generator(
                 random.randint(5, 8), random.choice(coupons_prefix)
@@ -94,8 +91,6 @@ def create_coupons(count):
             coupon["created_on"] + timedelta(days=20),
         )
         coupons.append(coupon)
-        # print(coupon)
-        # input()
     write_to_file(coupons, "coupons", GLOBAL_OVERWRITE_TO_FILE)
 
 

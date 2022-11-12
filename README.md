@@ -5,6 +5,7 @@ Create coupon management system
 
 # Decided coupon schema
 Coupons
+```
 {
     coupon_code: str
     rule_id(foreign_key)
@@ -14,9 +15,12 @@ Coupons
     expiration_date: date
     used_count: number
 }
+```
 
 
 coupon_rules
+
+```
 {
     rule_id:<str>
     user_group: list of user groups: <optional
@@ -30,6 +34,9 @@ coupon_rules
     absolute: integer <optional>
     percentage: integer <optional>
 }
+```
+
+
 
 
 # Setup
