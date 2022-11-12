@@ -30,3 +30,15 @@ coupon_rules
     absolute: integer <optional>
     percentage: integer <optional>
 }
+
+
+# Setup
+
+
+1. Install python packages.
+   > `pip install -r requirements.txt`
+
+2. Make Directory `data` in the git path.
+
+3. To create coupon data run below command.
+   >  `python3 src/data_generator.py`
