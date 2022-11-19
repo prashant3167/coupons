@@ -106,7 +106,7 @@ def create_coupon_rules(count):
         select_coupon_type = random.randint(1, 4)
         coupon_rule = {
             "rule_id": f"rule_{seed}_{str(uuid.uuid4())}",
-            "expiration_dae": fake_datetime(),
+            "expiration_date": fake_datetime(),
             "valid_coupon": bool(random.getrandbits(1)),
             f"{'absolute' if bool(random.getrandbits(1)) else 'percentage'}": random.randint(
                 1, 80
