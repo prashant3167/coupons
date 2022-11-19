@@ -17,14 +17,15 @@ Coupons
 }
 ```
 
-
+<!-- TODO: Implement min_price -->
 coupon_rules
 
 ```
 {
     rule_id:<str>
-    user_group: list of user groups: <optional
-    vaild_coupon: boolean
+    user_group: list of user groups: <optional>
+    vaild_coupon: boolean,
+    min_price: integer <optional>
     used_by: date,
     created_on: date,
     expiration_date: date
