@@ -118,7 +118,7 @@ def create_coupon_rules(count):
             coupon_rule["can_be_used"] = 1
         elif select_coupon_type == 2:
             coupon_rule["user_group"] = random.choices(coupon_user_group, k=2)
-        coupon_rule["created_on"] = coupon_rule["expiration_dae"] - timedelta(days=120)
+        coupon_rule["created_on"] = coupon_rule["expiration_date"] - timedelta(days=120)
         coupon_rules.append(coupon_rule)
     write_to_file(coupon_rules, "coupon_rules", GLOBAL_OVERWRITE_TO_FILE)
 
