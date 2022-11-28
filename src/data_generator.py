@@ -4,7 +4,7 @@ from faker import Faker
 import json
 from datetime import datetime, timedelta
 
-seed = "1"
+seed = "2"
 fake = Faker()
 fake.seed_instance(int(seed))
 random.seed(int(seed))
@@ -58,8 +58,11 @@ def create_customers(count):
     Args:
         count ([integer]): Customer count
     """
+    coupon_user_group = ["gold", "silver", "bronze"]
     for i in range(count):
-        customers.append(fake.user_name())
+        customers_data = fake.simple_profile()
+        customers_data['tier'] = random.choice(coupon_user_group)
+        customers.append(customers_data)
     write_to_file(customers, "customers")
 
 
@@ -106,7 +109,7 @@ def create_coupon_rules(count):
         select_coupon_type = random.randint(1, 4)
         coupon_rule = {
             "rule_id": f"rule_{seed}_{str(uuid.uuid4())}",
-            "expiration_dae": fake_datetime(),
+            "expiration_date": fake_datetime(),
             "valid_coupon": bool(random.getrandbits(1)),
             f"{'absolute' if bool(random.getrandbits(1)) else 'percentage'}": random.randint(
                 1, 80
@@ -114,18 +117,18 @@ def create_coupon_rules(count):
             "can_be_used": random.randint(100, 1000),
         }
         if select_coupon_type == 1:
-            coupon_rule["customer_id"] = random.choice(customers)
+            coupon_rule["customer_id"] = random.choice(customers)['username']
             coupon_rule["can_be_used"] = 1
         elif select_coupon_type == 2:
             coupon_rule["user_group"] = random.choices(coupon_user_group, k=2)
-        coupon_rule["created_on"] = coupon_rule["expiration_dae"] - timedelta(days=120)
+        coupon_rule["created_on"] = coupon_rule["expiration_date"] - timedelta(days=120)
         coupon_rules.append(coupon_rule)
     write_to_file(coupon_rules, "coupon_rules", GLOBAL_OVERWRITE_TO_FILE)
 
 
 if __name__ == "__main__":
     number_of_rules = 10000
-    number_of_coupons = 10000000
+    number_of_coupons = 1000
     customer_count = 10000
     print("customers")
     create_customers(customer_count)
