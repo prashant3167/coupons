@@ -1,4 +1,4 @@
-Load für 250.000 Records 
+Load for 250.000 Records 
 2022-11-27 22:37:26:645 1714 sec: 250000 operations; 220.71 current ops/sec; [CLEANUP: Count=28, Max=182527, Min=1, Avg=6518.39, 90=3, 99=182527, 99.9=182527, 99.99=182527] [INSERT: Count=1072, Max=440319, Min=19776, Avg=83332.42, 90=130687, 99=196223, 99.9=334847, 99.99=440319] 
 
 [OVERALL], RunTime(ms), 1714864.0
@@ -45,7 +45,7 @@ Run für 250.000 Records und 250.000 Operationen
 [UPDATE], Return=OK, 125207
 
 
-Load für 1.000.000 Records
+Load 1.000.000 Records
 2022-11-28 00:45:52:542 5587 sec: 1000000 operations; 175.61 current ops/sec; [CLEANUP: Count=28, Max=160255, Min=1, Avg=5722.5, 90=2, 99=160255, 99.9=160255, 99.99=160255] [INSERT: Count=1364, Max=703999, Min=20112, Avg=93312.72, 90=163199, 99=236031, 99.9=596479, 99.99=703999] 
 
 [OVERALL], RunTime(ms), 5587772.0
@@ -136,3 +136,20 @@ Run 2.000.000 Million Records and 2.000.000 operations
 [UPDATE], 95thPercentileLatency(us), 298239.0
 [UPDATE], 99thPercentileLatency(us), 534527.0
 [UPDATE], Return=OK, 1000196
+
+Load 4.000.000 Records
+[OVERALL], RunTime(ms), 1.7501556E7
+[OVERALL], Throughput(ops/sec), 228.55110711299042
+[CLEANUP], Operations, 32.0
+[CLEANUP], AverageLatency(us), 9690.3125
+[CLEANUP], MinLatency(us), 1.0
+[CLEANUP], MaxLatency(us), 309759.0
+[CLEANUP], 95thPercentileLatency(us), 15.0
+[CLEANUP], 99thPercentileLatency(us), 309759.0
+[INSERT], Operations, 4000000.0
+[INSERT], AverageLatency(us), 139857.648692
+[INSERT], MinLatency(us), 18528.0
+[INSERT], MaxLatency(us), 1.7661951E7
+[INSERT], 95thPercentileLatency(us), 247167.0
+[INSERT], 99thPercentileLatency(us), 449023.0
+[INSERT], Return=OK, 4000000
