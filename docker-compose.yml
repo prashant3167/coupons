@@ -1,0 +1,40 @@
+ version: '3'
+ services:
+   couchbase:
+     image: couchbase:latest
+     ports:
+       - "8091-8097:8091-8097"
+       - "49123:9123"
+       - "11207:11207"
+       - "11210:11210"
+       - "11280:11280"
+       - "18091-18097:18091-18097"
+     environment:  
+      - CLUSTER_NAME=coupons
+      - COUCHBASE_ADMINISTRATOR_USERNAME=admin
+      - COUCHBASE_ADMINISTRATOR_PASSWORD=admin@123
+      - COUCHBASE_BUCKET=coupons
+      - COUCHBASE_BUCKET_RAMSIZE=1024
+      - COUCHBASE_RBAC_USERNAME=admin
+      - COUCHBASE_RBAC_PASSWORD=admin@123
+      - COUCHBASE_RBAC_NAME=admin
+      - COUCHBASE_RAM_SIZE=2048
+      - COUCHBASE_INDEX_RAM_SIZE=1024
+     working_dir: /opt/couchbase
+     volumes:
+       - couchbase_data:/opt/couchbase/var
+       - ./data:/data
+     container_name: couchbase
+     networks:
+       - bridge
+ volumes:
+  couchbase_data:
+    external: true
+ networks:
+  bridge:
+#     # Use a custom driver
+#     driver: custom-driver-1
+  
+
+
+# -p 8091-8097:8091-8097 -p 9123:9123 -p 11207:11207 -p 11210:11210 -p 11280:11280 -p 18091-18097:18091-18097

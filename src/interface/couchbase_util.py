@@ -2,25 +2,13 @@ from couchbase.cluster import Cluster
 from couchbase.auth import PasswordAuthenticator
 from couchbase.options import ClusterOptions, QueryOptions
 import couchbase.exceptions
-import time
+from utils.utils import timeit
 
 
-def timeit(method):
-    def timed(*args, **kw):
-        ts = time.time()
-        result = method(*args, **kw)
-        te = time.time()
-        if "log_time" in kw:
-            name = kw.get("log_name", method.__name__.upper())
-            kw["log_time"][name] = int((te - ts) * 1000)
-        else:
-            print("%r  %2.2f ms" % (method.__name__, (te - ts) * 1000))
-        return result
-    return timed
 
 
 class Database:
-    def __init__(self, username="admin", password="dbpasss", host="127.0.0.1", db="test") -> None:
+    def __init__(self, username="admin", password="admin@123", host="127.0.0.1", db="coupon_system") -> None:
         self.host = host
         self.username = username
         self.password = password
@@ -36,17 +24,23 @@ class Database:
     @timeit
     def get_rule(self, rule_id):
         try:
-            return self.connect.scope("_default").collection("rules").get(rule_id)
+            return self.connect.scope("_default").collection("coupon_rules").get(rule_id).value
         except couchbase.exceptions.DocumentNotFoundException:
-            print("Rule not found")
+            # print("Rule not found")
             return None
 
     @timeit
     def get_coupon(self, coupon):
         try:
-            return self.connect.scope("_default").collection("coupons").get(coupon)
+            return self.connect.scope("_default").collection("coupons").get(coupon).value
         except couchbase.exceptions.DocumentNotFoundException:
-            print("Coupon not found")
+            # print("Coupon not found")
             return None    
 
-    
+    @timeit
+    def get_customer(self, username):
+        try:
+            return self.connect.scope("_default").collection("customers").get(username).value
+        except couchbase.exceptions.DocumentNotFoundException:
+            # print("Coupon not found")
+            return None   
