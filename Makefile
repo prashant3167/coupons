@@ -9,7 +9,7 @@ mongo:
 
 start:
 	docker-compose --file docker-compose-postgres.yml up -d
-	docker-compose --file docker-compose.yml up -d
+	docker-compose --file docker-compose.yml up -d --remove-orphans
 	docker-compose --file docker-compose-mongo.yml up -d
 
 stop:
