@@ -153,3 +153,28 @@ Load 4.000.000 Records
 [INSERT], 95thPercentileLatency(us), 247167.0
 [INSERT], 99thPercentileLatency(us), 449023.0
 [INSERT], Return=OK, 4000000
+
+Run 4.000.000 Records
+
+[OVERALL], RunTime(ms), 1.8957607E7
+[OVERALL], Throughput(ops/sec), 210.99709472825342
+[READ], Operations, 2001482.0
+[READ], AverageLatency(us), 147478.92501256568
+[READ], MinLatency(us), 15040.0
+[READ], MaxLatency(us), 1.9496959E7
+[READ], 95thPercentileLatency(us), 339199.0
+[READ], 99thPercentileLatency(us), 903167.0
+[READ], Return=OK, 2001482
+[CLEANUP], Operations, 32.0
+[CLEANUP], AverageLatency(us), 5215.90625
+[CLEANUP], MinLatency(us), 1.0
+[CLEANUP], MaxLatency(us), 166911.0
+[CLEANUP], 95thPercentileLatency(us), 3.0
+[CLEANUP], 99thPercentileLatency(us), 166911.0
+[UPDATE], Operations, 1998518.0
+[UPDATE], AverageLatency(us), 154888.53881526212
+[UPDATE], MinLatency(us), 18576.0
+[UPDATE], MaxLatency(us), 2.6230783E7
+[UPDATE], 95thPercentileLatency(us), 351231.0
+[UPDATE], 99thPercentileLatency(us), 927743.0
+[UPDATE], Return=OK, 1998518
