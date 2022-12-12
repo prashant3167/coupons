@@ -33,12 +33,21 @@ class Database:
 
     @timeit
     def get_rule(self, rule_id):
+      try:
         return self.bucket['coupon_rules'].find({"rule_id": rule_id})[0]
+      except:
+        return None
 
     @timeit
     def get_coupon(self, coupon):
-      return self.bucket['coupons'].find({"code": coupon})[0]  
+      try:
+        return self.bucket['coupons'].find({"code": coupon})[0]
+      except:
+        return None
     
     @timeit
     def get_customer(self, username):
-      return self.bucket['coupons'].find({"username": username})[0]
+      try:
+        return self.bucket['customers'].find({"username": username})[0]
+      except:
+        return None

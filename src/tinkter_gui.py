@@ -53,9 +53,10 @@ def focus5(event):
 
 def clear():
 	# clear the content of text entry box
-	customer_id_field.delete(0, END)
-	coupon_field.delete(0, END)
-	price_field.delete(0, END)
+	# customer_id_field.delete(0, END)
+	# coupon_field.delete(0, END)
+	# price_field.delete(0, END)
+	pass
 	# customer_tier_field.delete(0, END)
 
 

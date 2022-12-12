@@ -18,18 +18,27 @@ class Database:
 
     @timeit
     def get_rule(self, rule_id):
-      cur  = self.connect.cursor()
-      cur = cur.execute(f"""select * from coupon_rules where coupon_rules->>'rule_id'='{rule_id}';""")
-      return cur.fetchone()[0]
+      try:
+        cur  = self.connect.cursor()
+        cur.execute(f"""select * from coupon_rules where coupon_rules->>'rule_id'='{rule_id}';""")
+        return cur.fetchone()[0]
+      except:
+        return None
 
     @timeit
     def get_coupon(self, coupon):
-      cur  = self.connect.cursor()
-      cur.execute(f"""select * from coupons where coupon->>'code'='{coupon}';""")
-      return cur.fetchone()[0] 
+      try:
+        cur  = self.connect.cursor()
+        cur.execute(f"""select * from coupons where coupon->>'code'='{coupon}';""")
+        return cur.fetchone()[0]
+      except:
+        return None
     
     @timeit
     def get_customer(self, username):
-      cur  = self.connect.cursor()
-      cur.execute(f"""select * from customers where customers->>'username'='{username}';""")
-      return cur.fetchone()[0]
+      try:
+        cur  = self.connect.cursor()
+        cur.execute(f"""select * from customers where customers->>'username'='{username}';""")
+        return cur.fetchone()[0]
+      except:
+        return None

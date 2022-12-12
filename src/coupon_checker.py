@@ -33,7 +33,7 @@ def verify_coupon(coupon, customer_id, price, db="Mongodb"):
     price = float(price)
     db_client = (
         mongo_connect
-        if db == "Mongodb"
+        if db == "MongoDB"
         else couch_connect
         if db == "CouchBase"
         else postgres_client
