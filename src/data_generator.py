@@ -4,7 +4,7 @@ from faker import Faker
 import json
 from datetime import datetime, timedelta
 
-seed = "2"
+seed = "3"
 fake = Faker()
 fake.seed_instance(int(seed))
 random.seed(int(seed))
@@ -127,8 +127,8 @@ def create_coupon_rules(count):
 
 
 if __name__ == "__main__":
-    number_of_rules = 10000
-    number_of_coupons = 1000
+    number_of_rules = 100000
+    number_of_coupons = 1000000
     customer_count = 10000
     print("customers")
     create_customers(customer_count)
