@@ -1,4 +1,4 @@
-postgrhttps://github.com/prashant3167/coupons/pullses:
+postgres:
 	docker-compose --file docker-compose-postgres.yml up -d
 
 couchbase:
@@ -16,3 +16,6 @@ stop:
 	docker-compose --file docker-compose-postgres.yml down
 	docker-compose --file docker-compose-mongo.yml down
 	docker-compose --file docker-compose.yml down
+
+setup:
+	sh setup.sh
