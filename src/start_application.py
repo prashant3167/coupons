@@ -82,7 +82,7 @@ def insert():
 		# print(verify_coupon("black_friday_101BYP", 'sullivanjoe', 200))
 		print("empty input")
 	else:
-		print(f"Performing everythin in {variable.get()}")
+		print(f"Running the queries in {variable.get()}")
 		a,b = verify_coupon(coupon_field.get(), customer_id_field.get(), price_field.get(),variable.get())
 		print("********************************************")
 		if b is None:

@@ -14,6 +14,6 @@ start:
 
 stop:
 	docker-compose --file docker-compose-postgres.yml down
-	docker-compose --file docker-compose.yml down
 	docker-compose --file docker-compose-mongo.yml down
+	docker-compose --file docker-compose.yml down
 
