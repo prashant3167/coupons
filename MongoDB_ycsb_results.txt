@@ -1,0 +1,180 @@
+Load for 250.000 Records 
+2022-11-27 22:37:26:645 1714 sec: 250000 operations; 220.71 current ops/sec; [CLEANUP: Count=28, Max=182527, Min=1, Avg=6518.39, 90=3, 99=182527, 99.9=182527, 99.99=182527] [INSERT: Count=1072, Max=440319, Min=19776, Avg=83332.42, 90=130687, 99=196223, 99.9=334847, 99.99=440319] 
+
+[OVERALL], RunTime(ms), 1714864.0
+[OVERALL], Throughput(ops/sec), 145.78415547821868
+[CLEANUP], Operations, 32.0
+[CLEANUP], AverageLatency(us), 5704.125
+[CLEANUP], MinLatency(us), 1.0
+[CLEANUP], MaxLatency(us), 182527.0
+[CLEANUP], 95thPercentileLatency(us), 3.0
+[CLEANUP], 99thPercentileLatency(us), 182527.0
+[INSERT], Operations, 250000.0
+[INSERT], AverageLatency(us), 218792.938336
+[INSERT], MinLatency(us), 19776.0
+[INSERT], MaxLatency(us), 1.0838015E7
+[INSERT], 95thPercentileLatency(us), 461823.0
+[INSERT], 99thPercentileLatency(us), 652287.0
+[INSERT], Return=OK, 250000
+
+
+Run für 250.000 Records und 250.000 Operationen
+2022-11-27 23:02:21:172 956 sec: 250000 operations; 333.5 current ops/sec; [READ: Count=1003, Max=274175, Min=16432, Avg=56993.48, 90=93247, 99=139647, 99.9=246015, 99.99=274175] [CLEANUP: Count=31, Max=201343, Min=1, Avg=6495.68, 90=3, 99=201343, 99.9=201343, 99.99=201343] [UPDATE: Count=992, Max=529407, Min=19040, Avg=61758.24, 90=98815, 99=183679, 99.9=320511, 99.99=529407] 
+
+[OVERALL], RunTime(ms), 956038.0
+[OVERALL], Throughput(ops/sec), 261.49588196285083
+[READ], Operations, 124793.0
+[READ], AverageLatency(us), 117256.79805758336
+[READ], MinLatency(us), 16432.0
+[READ], MaxLatency(us), 7516159.0
+[READ], 95thPercentileLatency(us), 256511.0
+[READ], 99thPercentileLatency(us), 415231.0
+[READ], Return=OK, 124793
+[CLEANUP], Operations, 32.0
+[CLEANUP], AverageLatency(us), 6292.84375
+[CLEANUP], MinLatency(us), 1.0
+[CLEANUP], MaxLatency(us), 201343.0
+[CLEANUP], 95thPercentileLatency(us), 11.0
+[CLEANUP], 99thPercentileLatency(us), 201343.0
+[UPDATE], Operations, 125207.0
+[UPDATE], AverageLatency(us), 125975.660849633
+[UPDATE], MinLatency(us), 19040.0
+[UPDATE], MaxLatency(us), 7528447.0
+[UPDATE], 95thPercentileLatency(us), 269311.0
+[UPDATE], 99thPercentileLatency(us), 437247.0
+[UPDATE], Return=OK, 125207
+
+
+Load 1.000.000 Records
+2022-11-28 00:45:52:542 5587 sec: 1000000 operations; 175.61 current ops/sec; [CLEANUP: Count=28, Max=160255, Min=1, Avg=5722.5, 90=2, 99=160255, 99.9=160255, 99.99=160255] [INSERT: Count=1364, Max=703999, Min=20112, Avg=93312.72, 90=163199, 99=236031, 99.9=596479, 99.99=703999] 
+
+[OVERALL], RunTime(ms), 5587772.0
+[OVERALL], Throughput(ops/sec), 178.9622053297808
+[CLEANUP], Operations, 32.0
+[CLEANUP], AverageLatency(us), 5007.5
+[CLEANUP], MinLatency(us), 1.0
+[CLEANUP], MaxLatency(us), 160255.0
+[CLEANUP], 95thPercentileLatency(us), 3.0
+[CLEANUP], 99thPercentileLatency(us), 160255.0
+[INSERT], Operations, 1000000.0
+[INSERT], AverageLatency(us), 178526.222168
+[INSERT], MinLatency(us), 19424.0
+[INSERT], MaxLatency(us), 1.0108927E7
+[INSERT], 95thPercentileLatency(us), 375551.0
+[INSERT], 99thPercentileLatency(us), 579583.0
+[INSERT], Return=OK, 1000000
+
+Run for 1.000.000 Records and 1.000.000 Operations
+2022-11-28 09:08:02:844 3624 sec: 1000000 operations; 279.21 current ops/sec; [READ: Count=622, Max=95167, Min=15704, Avg=28911.02, 90=41727, 99=74495, 99.9=92543, 99.99=95167] [CLEANUP: Count=17, Max=148479, Min=1, Avg=8732.29, 90=3, 99=148479, 99.9=148479, 99.99=148479] [UPDATE: Count=666, Max=86207, Min=18864, Avg=30995.98, 90=44223, 99=66623, 99.9=85375, 99.99=86207] 
+
+[OVERALL], RunTime(ms), 3624624.0
+[OVERALL], Throughput(ops/sec), 275.8906854890328
+[READ], Operations, 500102.0
+[READ], AverageLatency(us), 111451.89733294408
+[READ], MinLatency(us), 15704.0
+[READ], MaxLatency(us), 8437759.0
+[READ], 95thPercentileLatency(us), 216575.0
+[READ], 99thPercentileLatency(us), 385791.0
+[READ], Return=OK, 500102
+[CLEANUP], Operations, 32.0
+[CLEANUP], AverageLatency(us), 4640.25
+[CLEANUP], MinLatency(us), 1.0
+[CLEANUP], MaxLatency(us), 148479.0
+[CLEANUP], 95thPercentileLatency(us), 10.0
+[CLEANUP], 99thPercentileLatency(us), 148479.0
+[UPDATE], Operations, 499898.0
+[UPDATE], AverageLatency(us), 119758.1399725544
+[UPDATE], MinLatency(us), 18864.0
+[UPDATE], MaxLatency(us), 7864319.0
+[UPDATE], 95thPercentileLatency(us), 230783.0
+[UPDATE], 99thPercentileLatency(us), 400127.0
+[UPDATE], Return=OK, 499898
+
+
+Load 2.000.000 Records
+2022-11-28 12:54:10:872 11318 sec: 2000000 operations; 158.49 current ops/sec; [CLEANUP: Count=18, Max=692735, Min=1, Avg=38472.61, 90=2, 99=692735, 99.9=692735, 99.99=692735] [INSERT: Count=1376, Max=282623, Min=19744, Avg=53189.69, 90=87231, 99=180991, 99.9=277759, 99.99=282623] 
+
+[OVERALL], RunTime(ms), 1.1318688E7
+[OVERALL], Throughput(ops/sec), 176.69892482238225
+[CLEANUP], Operations, 32.0
+[CLEANUP], AverageLatency(us), 21723.0
+[CLEANUP], MinLatency(us), 1.0
+[CLEANUP], MaxLatency(us), 692735.0
+[CLEANUP], 95thPercentileLatency(us), 3.0
+[CLEANUP], 99thPercentileLatency(us), 692735.0
+[INSERT], Operations, 2000000.0
+[INSERT], AverageLatency(us), 180790.716128
+[INSERT], MinLatency(us), 19744.0
+[INSERT], MaxLatency(us), 9871359.0
+[INSERT], 95thPercentileLatency(us), 359423.0
+[INSERT], 99thPercentileLatency(us), 547839.0
+[INSERT], Return=OK, 2000000
+
+
+Run 2.000.000 Million Records and 2.000.000 operations
+2022-11-28 15:32:46:094 8560 sec: 2000000 operations; 0 current ops/sec; [READ: Count=0, Max=0, Min=9223372036854775807, Avg=NaN, 90=0, 99=0, 99.9=0, 99.99=0] [CLEANUP: Count=1, Max=604671, Min=604160, Avg=604416, 90=604671, 99=604671, 99.9=604671, 99.99=604671] [UPDATE: Count=0, Max=0, Min=9223372036854775807, Avg=NaN, 90=0, 99=0, 99.9=0, 99.99=0] 
+
+[OVERALL], RunTime(ms), 8560075.0
+[OVERALL], Throughput(ops/sec), 233.6428127090008
+[READ], Operations, 999804.0
+[READ], AverageLatency(us), 133262.86028861656
+[READ], MinLatency(us), 15520.0
+[READ], MaxLatency(us), 9510911.0
+[READ], 95thPercentileLatency(us), 290047.0
+[READ], 99thPercentileLatency(us), 527871.0
+[READ], Return=OK, 999804
+[CLEANUP], Operations, 32.0
+[CLEANUP], AverageLatency(us), 18892.125
+[CLEANUP], MinLatency(us), 1.0
+[CLEANUP], MaxLatency(us), 604671.0
+[CLEANUP], 95thPercentileLatency(us), 19.0
+[CLEANUP], 99thPercentileLatency(us), 604671.0
+[UPDATE], Operations, 1000196.0
+[UPDATE], AverageLatency(us), 139951.6095325316
+[UPDATE], MinLatency(us), 18960.0
+[UPDATE], MaxLatency(us), 1.1411455E7
+[UPDATE], 95thPercentileLatency(us), 298239.0
+[UPDATE], 99thPercentileLatency(us), 534527.0
+[UPDATE], Return=OK, 1000196
+
+Load 4.000.000 Records
+[OVERALL], RunTime(ms), 1.7501556E7
+[OVERALL], Throughput(ops/sec), 228.55110711299042
+[CLEANUP], Operations, 32.0
+[CLEANUP], AverageLatency(us), 9690.3125
+[CLEANUP], MinLatency(us), 1.0
+[CLEANUP], MaxLatency(us), 309759.0
+[CLEANUP], 95thPercentileLatency(us), 15.0
+[CLEANUP], 99thPercentileLatency(us), 309759.0
+[INSERT], Operations, 4000000.0
+[INSERT], AverageLatency(us), 139857.648692
+[INSERT], MinLatency(us), 18528.0
+[INSERT], MaxLatency(us), 1.7661951E7
+[INSERT], 95thPercentileLatency(us), 247167.0
+[INSERT], 99thPercentileLatency(us), 449023.0
+[INSERT], Return=OK, 4000000
+
+Run 4.000.000 Records
+
+[OVERALL], RunTime(ms), 1.8957607E7
+[OVERALL], Throughput(ops/sec), 210.99709472825342
+[READ], Operations, 2001482.0
+[READ], AverageLatency(us), 147478.92501256568
+[READ], MinLatency(us), 15040.0
+[READ], MaxLatency(us), 1.9496959E7
+[READ], 95thPercentileLatency(us), 339199.0
+[READ], 99thPercentileLatency(us), 903167.0
+[READ], Return=OK, 2001482
+[CLEANUP], Operations, 32.0
+[CLEANUP], AverageLatency(us), 5215.90625
+[CLEANUP], MinLatency(us), 1.0
+[CLEANUP], MaxLatency(us), 166911.0
+[CLEANUP], 95thPercentileLatency(us), 3.0
+[CLEANUP], 99thPercentileLatency(us), 166911.0
+[UPDATE], Operations, 1998518.0
+[UPDATE], AverageLatency(us), 154888.53881526212
+[UPDATE], MinLatency(us), 18576.0
+[UPDATE], MaxLatency(us), 2.6230783E7
+[UPDATE], 95thPercentileLatency(us), 351231.0
+[UPDATE], 99thPercentileLatency(us), 927743.0
+[UPDATE], Return=OK, 1998518

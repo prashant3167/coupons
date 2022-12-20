@@ -19,4 +19,3 @@ stop:
 
 setup:
 	sh setup.sh
-
