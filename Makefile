@@ -17,3 +17,6 @@ stop:
 	docker-compose --file docker-compose-mongo.yml down
 	docker-compose --file docker-compose.yml down
 
+setup:
+	sh setup.sh
+

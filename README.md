@@ -50,3 +50,6 @@ coupon_rules
 
 3. To create coupon data run below command.
    >  `python3 src/data_generator.py`
+
+
+![Alt text](image/coupon_ui.png "POC UI")

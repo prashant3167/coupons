@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from urllib.parse import quote_plus
 import json
-engine = create_engine('postgresql://admin:%s@127.0.0.1:5433/coupon_system' % quote_plus("admin@123"))
+engine = create_engine('postgresql://{}:%s@127.0.0.1:5433/coupon_system' % quote_plus("{}"))
 
 import psycopg2
 
